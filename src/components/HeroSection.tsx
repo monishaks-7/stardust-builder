@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Scene3D from './Scene3D';
 import profileImage from '@/assets/profile.jpg';
@@ -8,6 +8,7 @@ const HeroSection = () => {
   const socialLinks = [
     { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com', label: 'GitHub' },
+    { icon: Mail, href: 'mailto:monishabecse2026@gmail.com', label: 'Email' },
   ];
 
   return (

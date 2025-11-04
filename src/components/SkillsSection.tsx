@@ -30,12 +30,6 @@ const SkillsSection = () => {
     },
   ];
 
-  const languages = [
-    { name: 'Telugu', level: 100 },
-    { name: 'English', level: 95 },
-    { name: 'Tamil', level: 90 },
-  ];
-
   return (
     <section id="skills" className="py-20 relative overflow-hidden" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,43 +75,6 @@ const SkillsSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Languages */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="max-w-3xl mx-auto"
-        >
-          <Card className="p-8">
-            <h3 className="text-2xl font-bold mb-8 text-center">
-              <span className="text-gradient">Languages</span>
-            </h3>
-            <div className="space-y-6">
-              {languages.map((language, index) => (
-                <motion.div
-                  key={language.name}
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
-                >
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium">{language.name}</span>
-                    <span className="text-muted-foreground">{language.level}%</span>
-                  </div>
-                  <div className="w-full h-3 bg-muted rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: `${language.level}%` } : {}}
-                      transition={{ duration: 1, delay: 1 + index * 0.1, ease: "easeOut" }}
-                      className="h-full bg-gradient-to-r from-primary to-secondary rounded-full"
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </Card>
-        </motion.div>
       </div>
 
       {/* Background Elements */}

@@ -38,7 +38,7 @@ const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             className="text-xl sm:text-2xl font-bold"
           >
-            <span className="text-gradient">MKS</span>
+            <span className="text-gradient">Monisha K S</span>
           </motion.div>
 
           {/* Desktop Navigation */}

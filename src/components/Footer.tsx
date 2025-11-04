@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Instagram, Youtube, Twitter, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,11 +7,10 @@ const Footer = () => {
   const socialLinks = [
     { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
-    { icon: Youtube, href: 'https://youtube.com', label: 'YouTube' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
     { icon: Mail, href: 'mailto:monishabecse2026@gmail.com', label: 'Email' },
   ];
+
+  const languages = ['Telugu', 'English', 'Tamil'];
 
   return (
     <footer className="py-12 border-t border-border relative overflow-hidden">
@@ -50,22 +49,24 @@ const Footer = () => {
             ))}
           </motion.div>
 
-          {/* Navigation Links */}
+          {/* Languages Known */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap gap-6 justify-center text-sm"
+            className="text-center"
           >
-            {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-              >
-                {item}
-              </a>
-            ))}
+            <p className="text-sm text-muted-foreground mb-2">Languages Known</p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              {languages.map((language) => (
+                <span
+                  key={language}
+                  className="px-4 py-2 rounded-full bg-muted text-foreground/80 border border-border"
+                >
+                  {language}
+                </span>
+              ))}
+            </div>
           </motion.div>
 
           {/* Copyright */}
